@@ -25,7 +25,7 @@ var apiDescriptionsJson = map[string]string{"helloworld":`{
     "resourcePath": "/helloworld",
     "apis": [
         {
-            "path": "/j/helloworld",
+            "path": "/j/helloworld/{key}",
             "description": "获取指定 key 数据",
             "operations": [
                 {
@@ -60,7 +60,13 @@ var apiDescriptionsJson = map[string]string{"helloworld":`{
                             "responseModel": ".github.com.busyStone.go-labs.revel-swagger.app.controllers.AjaxResult"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "path": "/j/helloworld",
+            "description": "设置指定 key 数据",
+            "operations": [
                 {
                     "httpMethod": "POST",
                     "nickname": "AjaxPostHelloWorld",

@@ -7,7 +7,7 @@ module:swagger
 
 GET     /                                       App.Index
 
-GET  /j/helloworld                              App.AjaxGetHelloWorld
+GET  /j/helloworld/:key                         App.AjaxGetHelloWorld
 POST /j/helloworld                              App.AjaxPostHelloWorld
 
 # Ignore favicon requests

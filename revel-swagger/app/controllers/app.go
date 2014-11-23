@@ -25,7 +25,7 @@ func (c App) Index() revel.Result {
 // @Success 200 {object}  AjaxResult
 // @Failure 400 {object}  AjaxResult    key 必须 > 0
 // @Resource /helloworld
-// @Router /j/helloworld [get]
+// @Router /j/helloworld/{key} [get]
 func (c *App) AjaxGetHelloWorld(key int) revel.Result {
   if key < 0 {
     c.Response.Status = 400
