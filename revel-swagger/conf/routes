@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+module:testrunner
+module:swagger
+
+GET     /                                       App.Index
+
+GET  /j/helloworld                              App.AjaxGetHelloWorld
+POST /j/helloworld                              App.AjaxPostHelloWorld
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/*filepath                       Static.Serve("public")
+
+# Catch all
+*       /:controller/:action                    :controller.:action

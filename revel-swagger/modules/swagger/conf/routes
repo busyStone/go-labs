@@ -1,0 +1,5 @@
+
+
+GET     /docs                                   Docs.GetApiDocs
+GET     /docs/api/*filepath                     Static.ServeModule("swagger","swagger-ui")
+GET     /docs/:apiKey                           Docs.GetApiDoc
